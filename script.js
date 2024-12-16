@@ -1,21 +1,18 @@
 let moneyInTheBank = 1000000
 let rate = getRate()
 let bankSEK = moneyInTheBank
-let bankEuro = bankSEK / rate
+let bankEuro = 0;
 
-function getRate() {
-    return rate
-}
 
 function bank() {
-    alert(`Amount in SEK: ${bankSEK}. Amount in Euro: ${bankEuro}`);
+    alert(`Amount in SEK: ${bankSEK.toFixed(2)}\nAmount in Euro: ${bankEuro.toFixed(2)}\nCurrent rate: ${rate.toFixed(2)} SEK/EUR`);
 }
 
 function buy() {
     const amountEuro = 1000
     const exchangeSEK = amountEuro * rate
 
-    if (bank >= exchangeSEK) {
+    if (bankSEK >= exchangeSEK) {
         bankSEK -= exchangeSEK
         bankEuro += amountEuro
         alert("Buy complete")
@@ -38,6 +35,10 @@ function sell() {
     }
     bank()
 }
+
+//setInterval(() => {
+//rate = getRate(); // Uppdatera växelkursen från trader.js
+//}, 1000);
 
 //När jag trycker på köp så ska euro öka och sek minska
 //Varje gång jag trycker köp så köper jag 1000 euro

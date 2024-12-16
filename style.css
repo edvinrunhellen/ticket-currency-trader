@@ -1,23 +1,23 @@
-footer{
+footer {
   background-color: black;
   overflow: hidden;
-  height:16px;
+  height: 16px;
 }
 
-footer span{
+footer span {
   padding: 0 1vw;
   color: lightgray;
   border-left: 1px solid lightgray;
   font-style: italic;
 }
 
-footer span:first-child{
+footer span:first-child {
   font-weight: bold;
   color: yellow;
-  border:none;
+  border: none;
   font-style: normal
 }
 
-footer>div{
+footer>div {
   display: inline;
 }
