@@ -1,11 +1,11 @@
 let moneyInTheBank = 1000000
-let rate = getRate()
 let bankSEK = moneyInTheBank
 let bankEuro = 0;
 
 
 function bank() {
     alert(`Amount in SEK: ${bankSEK.toFixed(2)}\nAmount in Euro: ${bankEuro.toFixed(2)}\nCurrent rate: ${rate.toFixed(2)} SEK/EUR`);
+    console.log("bank function called");
 }
 
 function buy() {
